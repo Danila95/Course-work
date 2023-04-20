@@ -1,118 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/style.css">
-        
-        <title>WebGenius</title>
-    </head>
-    <body>
-        <div>
-            <header class="header">
-            <div class="header_name">
-                <div class="header_logo">
-                    <img src="img/logo.svg" alt="логотип">
-                </div>
-                <div class="header_text">
-                    <p class="text-logo">WebGenius</p>
-                </div>
-            </div>
-    
-            </header>
-            <nav class="navigation">
-                <a class="navigation_item" href="/">Главная</a>
-                <a class="navigation_item" href="/">Навыки</a>
-                <a class="navigation_item" href="/">Опыт</a>
-                <a class="navigation_item" href="/">Работа</a>
-                <a class="navigation_item" href="/">Контакты</a>
-                <a class="navigation_item" href="/">Блог</a>
-            </nav>
-        </div>
-        <div class="block-welcome">
-            <img src="img/desctop.png" alt="компьютер">
-            <div class="block-welcome__text">
-                <div class='block-welcome__intro'>
-                    Добро пожаловать на сайт, посвященный веб-разработке!
-                </div>
-                <div class='block-welcome__description'>Что такое веб-разработка, спросите вы? Проще говоря, это процесс создания веб-сайтов и веб-приложений с использованием таких языков программирования, как HTML, CSS и JavaScript.</div>
-                <div class='block-welcome__list'>
-                    Что входит в веб-разработку: 
-                    <ol>
-                        <li>Фронтенд-разработка</li>
-                        <li>Бэкенд-разработка</li>
-                        <li>Веб-дизайн</li>
-                        <li>Создание веб-контента</li>
-                        <li>Веб-тестирование и отладка</li>
-                        <li>Веб-развертывание и обслуживание</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<title>WebGenius</title>
+	</head>
+	<body>
+		<div>
+			<header class="header">
+				<div class="header_name">
+					<div class="header_logo">
+						<img src="img/logo.svg" alt="логотип" />
+					</div>
+					<div class="header_text">
+						<p class="text-logo">WebGenius</p>
+					</div>
+				</div>
+				<a onClick="changeColor()" class="change_color">Сменить фон</a>
+			</header>
+			<nav class="navigation">
+				<a class="navigation_item" href="#">Главная</a>
+				<a class="navigation_item" href="#">Навыки</a>
+				<a class="navigation_item" href="#">Опыт</a>
+				<a class="navigation_item" href="#">Работа</a>
+				<a href="#" class="navigation_item" onclick="openModal()">Контакты</a>
+				<a class="navigation_item" href="#">Блог</a>
+			</nav>
+		</div>
+		<!-- модальное окно -->
+		<div id="myModal" class="modal">
+			<!-- Модальное содержание -->
+			<div class="modal-content">
+				<!-- Заголовок -->
+				<div class="modal-header">
+					<!-- Крестик для закрывания окна -->
+					<span class="close">&times;</span>
+					<!-- Текст заголовка -->
+					<h2>Контакты</h2>
+				</div>
+				<!-- Модальное основное содержимое -->
+				<div class="modal-body">
+					<p>Для того, чтобы связаться с нами, вы можете написать нам на почту или позвонить по телефону</p>
+					<br />
+					<p>Телефон</p>
+					<a href="tel:+7999556573">+7999556573</a> <br />
+					<br />
+					<p>E-mail</p>
+					<a href="mailto:admil@maili.ru">Написать: admin@maili.ru</a>
+				</div>
+			</div>
+		</div>
+		<div class="block-welcome">
+			<img src="img/desctop.png" alt="компьютер" />
+			<div class="block-welcome__text">
+				<div class="block-welcome__intro">Добро пожаловать на сайт, посвященный веб-разработке!</div>
+				<div class="block-welcome__description">
+					Что такое веб-разработка, спросите вы? Проще говоря, это процесс создания веб-сайтов и веб-приложений с
+					использованием таких языков программирования, как HTML, CSS и JavaScript.
+				</div>
+				<div class="block-welcome__list">
+					Что входит в веб-разработку:
+					<ol>
+						<li>Фронтенд-разработка</li>
+						<li>Бэкенд-разработка</li>
+						<li>Веб-дизайн</li>
+						<li>Создание веб-контента</li>
+						<li>Веб-тестирование и отладка</li>
+						<li>Веб-развертывание и обслуживание</li>
+					</ol>
+				</div>
+			</div>
+		</div>
 
+		<article class="block-works">
+			<h2 class="block-works__h2">Почему стоит стать веб-разработчиком</h2>
 
-        <article class="block-works">
-            <h2 class="block-works__h2">Почему стоит стать веб-разработчиком</h2>
+			<div class="block-works__row">
+				<div class="block-works__item">
+					<h3 class="block-works__item-h3">Нехватка кадров на рынке труда</h3>
+					<p class="block-works__item-p">
+						Практически каждому предпринимателю необходим сайт, поэтому спрос на веб-разработчиком с каждым годом только
+						растет. Почти 1 млн специалистов не хватает в российской IT-индустрии
+					</p>
+				</div>
+				<div class="block-works__item">
+					<h3 class="block-works__item-h3">Возможность работать удаленно</h3>
+					<p class="block-works__item-p">
+						Веб-разработчики могут работать как в офисе, так и дистанционно. Более 2300 работодателей предлагают "работу
+						из дома" на сайте hh.ru, а это дает много возможностей - например, выстроить удобный график для себя или
+						работать в любом городе нашей страны.
+					</p>
+				</div>
+			</div>
 
-            <div class="block-works__row">
-                <div class="block-works__item">
-                    <h3 class="block-works__item-h3">Нехватка кадров на рынке труда</h3>
-                    <p class="block-works__item-p">Практически каждому предпринимателю необходим сайт, поэтому спрос на веб-разработчиком с каждым годом только растет. Почти 1 млн специалистов не хватает в российской IT-индустрии</p>
-                </div>
-                <div class="block-works__item">
-                    <h3 class="block-works__item-h3">Возможность работать
-                        удаленно</h3>
-                    <p class="block-works__item-p">Веб-разработчики могут работать как в офисе, так и дистанционно. Более 2300 работодателей предлагают "работу из дома" на сайте hh.ru, а это дает много возможностей - например, выстроить удобный график для себя или работать в любом городе нашей страны.</p>
-                </div>
-            </div>
+			<div class="block-works__row">
+				<div class="block-works__item">
+					<h3 class="block-works__item-h3">Быстрый карьерный рост</h3>
+					<p class="block-works__item-p">
+						Если вы будете постоянно развивать навыки и проводить анализ своей работы, то повышение не заставит себя
+						долго ждать. Устроиться на работу можно уже в процессе обучения, за несколько лет вырасти из новичка в
+						среднего специалиста, а потом и до старшего.
+					</p>
+				</div>
+				<div class="block-works__item">
+					<h3 class="block-works__item-h3">Хороший уровень дохода</h3>
+					<p class="block-works__item-p">
+						Уровень зарплат разработчиков действительно высокий, что делает эту професиию еще привлекательней.
+						Зарплатный диапазон составляет примерно от 50 000 до 300 000, в зависимости от выбранной должности и
+						имеющегося опыта.
+					</p>
+				</div>
+			</div>
+		</article>
 
-            <div class="block-works__row">
-                <div class="block-works__item">
-                    <h3 class="block-works__item-h3">Быстрый карьерный рост</h3>
-                    <p class="block-works__item-p">Если вы будете постоянно развивать навыки и проводить анализ своей работы, то повышение не заставит себя долго ждать. Устроиться на работу можно уже в процессе обучения, за несколько лет вырасти из новичка в среднего специалиста, а потом и до старшего.</p>
-                </div>
-                <div class="block-works__item">
-                    <h3 class="block-works__item-h3">Хороший уровень
-                        дохода</h3>
-                    <p class="block-works__item-p">Уровень зарплат разработчиков действительно высокий, что делает эту професиию еще привлекательней. Зарплатный диапазон составляет примерно от 50 000 до 300 000, в зависимости от выбранной должности и имеющегося опыта.</p>
-                </div>
-            </div>
-        </article>
-
-        <section class="block-skills">
-            <h2 class="block-skills__h2">
-                Основы
-            </h2>
-            <div class="block-skills__items">
-                <img src="img/html.png" alt="HTML">
-                <img src="img/css.png" alt="CSS">
-                <img src="img/JavaScript.png" alt="JavaScript">
-            </div>
-        </section>
-
-        <section>
-            <div class="container feedback-form">
-                <div class="feedback-form__header">
-                    Хочешь получать полезные обучающие рассылки от нас? Нужно только заполнить форму?
-                </div>
-                <form action="#">
-                    <div class="feedback-form__content">
-                        <input type="text" class="input-box" placeholder="Имя">
-                        <input type="text" class="input-box" placeholder="E-mail">
-
-                        <input type="submit" class="button" value="Отправить">
-
-                    </div>
-                </form>
-            </div>
-        </section>
-        <footer>
-            <img src="./img/logo-footer.png" alt="logo" />
-            <div>Этот сайт был создан Матвеем Богдановым. All rights reserved © 2023</div>
-        </footer>
-    </body>
+		<!-- <section class="block-skills">
+			<h2 class="block-skills__h2">Основы</h2>
+			<div class="block-skills__items">
+				<img src="img/html.png" alt="HTML" />
+				<img src="img/css.png" alt="CSS" />
+				<img src="img/JavaScript.png" alt="JavaScript" />
+			</div>
+		</section> -->
+		<!-- Slider main container -->
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/html.png" alt="HTML" /></div>
+				<div class="swiper-slide"><img src="img/css.png" alt="CSS" /></div>
+				<div class="swiper-slide"><img src="img/JavaScript.png" alt="JavaScript" /></div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<section>
+			<div class="feedback-form">
+				<div class="feedback-form_header">
+					<h2>Хочешь получать полезные обучающие рассылки от нас? Нужно только заполнить форму!</h2>
+				</div>
+				<form action="#" id="feedback-form">
+					<div class="feedback-form_content">
+						<input type="text" class="input-box" placeholder="Имя" id="name" />
+						<input type="text" class="input-box" placeholder="E-mail" id="email" />
+						<input type="text" class="input-box" placeholder="Телефон" id="phone" />
+						<input type="submit" class="button" value="Отправить" />
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<img src="./img/logo-footer.png" alt="logo" />
+			<div>Этот сайт был создан Матвеем Богдановым. All rights reserved © 2023</div>
+		</footer>
+		<script>
+			//функция по смене темы
+			function changeColor() {
+				if (document.body.style.backgroundColor != 'rgb(61, 88, 171)') {
+					document.body.style.backgroundColor = '#3d58ab'
+				} else {
+					document.body.style.backgroundColor = '#252323'
+				}
+			}
+			//код проверки формы
+			//получаем элемент "форма" по id
+			const form = document.getElementById('feedback-form')
+			//добавляем обработчик событий, при нажатии на input с типом submit (кнопка отправить),
+			//будет вызываться функция
+			form.addEventListener('submit', function (event) {
+				//находим инпуты по их id и заводим для них константы
+				const nameInput = document.getElementById('name')
+				const emailInput = document.getElementById('email')
+				const phoneInput = document.getElementById('phone')
+				//берем значение из каждого инпута при помощи value и сравниваем его с пустой строкой по значению
+				//и по типу. Если хотя бы какое-то поле пустое - не обрабатываем форму и выводим диалоговое окно
+				//с просьбой заполнить поля
+				if (nameInput.value === '' || emailInput.value === '' || phoneInput.value === '') {
+					event.preventDefault() //Предотвращение отправки формы
+					window.alert('Пожалуйста, заполните все поля!') // Отображение окна с ошибкой
+				}
+			})
+			// код модального окна
+			function openModal() {
+				//находим элемент по id myModal
+				let modal = document.getElementById('myModal')
+				//находим первый элемент с классом close для
+				let span = document.getElementsByClassName('close')[0]
+				//делаем окно видимым при помощи css значения block свойства
+				//display, которое здаем модальному окну
+				modal.style.display = 'block'
+				//навешиваем обработчик событий на элемент span
+				//при клике на который, модальное окно будет скрываться
+				//свойство display: none
+				span.onclick = function () {
+					modal.style.display = 'none'
+				}
+				//создаем обработчик события, который реагирует на клик
+				//в окне браузера.
+				window.onclick = function (event) {
+					//если мы кликнули вне модального окна, но в окне браузера
+					//то белое модальное окно исчезает
+					//display:none
+					if (event.target == modal) {
+						modal.style.display = 'none'
+					}
+				}
+			}
+		</script>
+		<script type="module">
+			import Swiper from './js/swiper-bundle.esm.browser.min.js'
+			const swiper = new Swiper('.mySwiper', {
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'fraction'
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				}
+			})
+		</script>
+	</body>
 </html>
